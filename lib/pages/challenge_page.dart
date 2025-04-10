@@ -70,6 +70,7 @@ class _ChallengePageState extends State<ChallengePage> {
     final types = ['compare', 'order', 'compose'];
     questionType = types[Random().nextInt(types.length)];
 
+  //random type of question
     switch (questionType) {
       case 'compare':
         int a = Random().nextInt(90) + 10;
@@ -104,6 +105,8 @@ class _ChallengePageState extends State<ChallengePage> {
     }
   }
 
+
+  //Timer
   void startTimer() {
     countdown?.cancel();
     timer = 5;
@@ -121,6 +124,7 @@ class _ChallengePageState extends State<ChallengePage> {
     });
   }
 
+  //Answer Wrong
   void wrongAnswer() {
     setState(() {
       health--;
@@ -169,6 +173,8 @@ class _ChallengePageState extends State<ChallengePage> {
     );
   }
 
+
+  //Checking
   void submitAnswer() {
     countdown?.cancel();
 
